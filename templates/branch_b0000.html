@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Girinagar </title>
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image:url({{ url_for('static' , filename ='bg.jpg' )}});
+}
+
+
+/* Style the header */
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+    
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+button{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: right;
+}
+
+</style>
+</head>
+
+<body>
+
+  <div class="header">
+   <h1><b>Girinagar</b></h1>
+
+ </div>
+
+
+
+ <div class="row">
+   <div class="column side">
+     <h2>4 BHK Flat</h2>
+     <img border="0" src="{{ url_for('static' , filename ='i1.jpg' )}}" width="115" height="115" >
+   </div>
+   <div class="column middle">
+     <h2> About </h2>
+      94, 4th Main Rd, Girinagar, Bengaluru, Karnataka 560085<br>
+      Contact Number : 08025647891<br>
+      Type : 4 BHK <br>
+      2550 sqft<br>
+      Cost : 2 Cr<br>
+   </div>
+   <div class="column side">
+     <h2> More Info. </h2>
+     New property<br>
+     Unfurnished<br>
+     Ready to move in<br>
+   </div>
+ </div>
+
+
+
+
+
+
