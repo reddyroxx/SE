@@ -1,0 +1,255 @@
+SOFTWARE REQUIREMENT
+
+$ Requirement is the Property which must be exhibited by software developed/adapted to solve a particular problem.
+$ Requirement should specify the externally visible behavior of what and not how.
+$ Requirements can be looked at as :
+	$ Individual requirements
+	$ Set of requirements
+$ Individual Requirement Properties:
+	$ Clear - Easy to understand
+	$ Concise – As few words as possible
+	$ Consistent - No requirement should contradict another
+	$ Unambiguous - A requirement should have only one interpretation
+	$ Feasible – realizable with a specified time frame
+	$ Traceable – backwards to stakeholder request and forward to software components
+	$ Verifiable
+	$ Prioritized - requirements should be prioritized
+	$ Quantifiable - the requirement should be quantifiable
+$ Properties of Sets of Software requirements:
+	$ choices must be made about what to include or exclude.
+	$ Many Factors will affect the stability of requirements.
+	$ Changes to the requirements should be able to be made easily, completely, and consistently.
+	$ Goals should be attainable
+	$ All the services that are needed from the system should be included.
+ 	$ Every requirement should be one that thesoftware will meet.
+$ SE req process is an iterative process
+---------------------------------------------------------------------------------------------------------------------------------
+Requirements Engineering Processes
+
+1)Requirements Elicitation
+
+$ It can be described as a process of :
+	$ ensuring that the stakeholders have been identified 
+	$ they have been given an opportunity to explain their problem and needs 
+	$ describe what they would like the new system to do 
+$ Involves:
+	$ Understanding the problem
+	$ Understanding the domain
+	$ Identifying clear business objectives
+	$ Understanding the needs
+	$ Understanding constraints of the system stake holders
+	$ Writing business objectives for the project
+$ Elicitation approach depends on:
+	$ Nature of the system being developed
+	$ Background and experience of stakeholders
+
+# Active  
+$ where there are ongoing interaction between the stake holders and users. 
+$ Some of the techniques are:
+	– interviews
+	– facilitated meetings
+	– role-playing
+	– Prototypes
+	– Ethnography
+	– scenarios
+# Passive 
+$ infrequent interaction between the stake holders and users. 
+$ E.g. use of
+	– use cases
+	– business process analysis and modeling
+	– workflows
+	– questionnaires
+	– checklists
+	– documentation	
+===================================================================================================
+2)Requirement Analysis Activities
+
+# Understand the requirements in depth, both from a product and process perspective
+$ Product Requirements :
+	• Dictate what the software must do
+	• What users must be able to do with the software
+	• Might give specific parameters for performance
+	• Portability
+	• Usability
+
+$ Process Requirements : 
+	• Are constraints on development of the software
+	• Development language or toolset
+	• Verification techniques
+	• Overall process to be followed
+	• Imposed by users, the development organization, or third parties
+
+$ Requirement or Problem needs to be correctly internalized
+$ Req represent a compromise
+-----------------------------------------------------------------------------------------
+# Classify and Organize the requirements into coherent clusters
+$ Functional Requirements :
+	$ The system should provide with different inputs, and expression on how the system should
+	  behave in particular situations.
+	$ Could be written as high-level statements
+	$ It should be fairly easy to verify a well-written functional requirement
+	$ This also indicates states what the system should not do
+	$ Ex:
+		1. system shall assign a unique tracking number to each shipment
+		2. system shall display the current payment due date as mmddyyyy
+
+$ Domain requirements :
+	$ Constraints on the system from the domain of operation
+
+$ Non-Functional Requirements :
+	$ Constraints on the services or functions offered by the system
+	$ Often applied to the system as a whole rather than individual features or services.
+	$ Specify the criteria that can be used to judge the operation of the system.
+	$ Nonfunctional requirements may not be directly observable.
+	$ Ex:With 100 concurrent users a database record shall be fetched over the network in less than 3ms
+	$ NFRs may affect the overall architecture of a system rather than the individual components.
+	$ A single NFR may generate a number of related FR
+	
+$ User requirements :
+	$ Statements in natural language plus informal context diagrams system/sub-system and 
+	  their interconnections and operational constraints.
+	$ Written for/by customers.
+
+$ System requirements :
+	$ A structured document setting out detailed descriptions of the system’s functions,
+	services and operational constraints.
+	$ Defines what should be implemented.
+	$ Also called Software requirements / Functional specifications.
+-----------------------------------------------------------------------------------------
+# Model the requirements
+
+$ A logical first step in creating a model is to identify the essential components of the system 
+  being modeled. This is called as decomposition
+$ Should provide value to all stakeholders
+$ Should be Simple
+$ Supports Analysis
+
+$ 2 main Goals :
+	$ Analysing and validating the requirements
+	$ Communicating the requirements
+		$ who are communicating : Analyst/Developer/Customer/User
+		$ What is communicated : Functionality, Data flow & Context flow
+
+$ Model Types :
+	▪ Informal Eg. Prose
+	▪ Simple Procedural (Flow charts , Pseudo Code)
+	▪ Formal Static models (ER Diagrams, UML Class Diagrams)
+		$ ER Model:
+			$ Entity: distinguishable object of some type 
+ 			$ Relationship: association between two or more entities
+			$ Entity type: type of a set of entities 
+			$ Cardinality: Specifies the number of occurrences of one object 
+			  that can be related to no of occurrences of another object
+			$ Attribute: type of a set of attribute values 
+			$ Modality: Necessary (1) or not (0)
+			$ Limitations : Assumes info content can readily be represented in a relational database else is Inadequate.
+			$ Attribute value: piece of information (partially) describing an entity
+	▪ Formal Dynamic models (FSMs, DFDs)
+		$ FSM:
+			$ This represents system’s responses to stimuli
+			$ often used for modelling real-time systems.
+			$ Each state models the behaviour of the system in response to external and internal events
+			$ Could be a hierarchy of State Machines
+		$ DFD:
+			$ Data flow diagram (DFD) is a graphical representation of the "flow" of data.
+			$ A module transforms some input stream to an output stream.
+			$ 4 Type of Data entities:
+				• External Entity
+					• Source and Destination of a transaction.
+					• These are located outside the domain considered in the DFD.
+					• Depicted as Squares in the diagram
+				• Processes
+					• Transforms the data
+					• Depicted as circles
+				• Data Stores
+					• These lie between processes and are places where data structures reside
+					• Depicted between two parallel lines
+				• Data Flows
+					• Paths where data structures travel between processes, entities and data stores
+					• Depicted as an Arrow
+-----------------------------------------------------------------------------------------
+# Analyze the requirements (if necessary) using fish bone diagram
+-----------------------------------------------------------------------------------------
+# Recognize and resolve conflicts (e.g., functionality v. cost v. timeliness)
+-----------------------------------------------------------------------------------------
+# Prioritize the requirements
+$ (MoSCoW -Must have, Should have, Could have, Wont have)
+$ PARETO’S LAW
+	$ Vital Few – Trivial Many : 80-20 Rule
+	$ Focus on the largest contributors
+	$ 20 % Effort yeilds 80 % of the benefit
+	$ Use the 80-20 rule to focus on the top contributing causes to address the greatest portion of the problem
+-----------------------------------------------------------------------------------------
+# Identify risks if any
+-----------------------------------------------------------------------------------------
+# Decide on Build or Buy and refine requirements
+=========================================================================================
+3)Requirement Specification
+
+$ Requirements specification is the documentation of a set of requirements that is
+  reviewed and approved by the customer
+$ provides direction for the software construction activities in the next stage of the life cycle.
+$ For complex software systems
+	– Initially a layered requirements set is produced starting from High level
+	  system definition document
+	– Later lower-level specifications are arrived at through analysis and henceforth derieved.
+$ Software Requirement Specification (SRS):
+	-Correct
+	-Traceable
+	-Unambiguous
+	-Modifiable
+	-Complete
+	-Consistent
+	-Verifiable
+	-Ranked
+	-Functionality
+	-Design constraints imposed on an implementation
+	-Attributes
+	-External Interfaces
+	-Performance
+=========================================================================================
+4)Requirements Validation
+
+$ The purpose of requirements validation is to help ensure that the requirements indeed does what customer wants.
+$ repairing requirements errors down stream can be expensive.
+$ Validation and Verification:
+	$ Validation determines whether the software requirements, if implemented, will
+	  solve the right problem
+	$ Verification determines whether the requirements have been specified correctly
+$ Requirement Validation Approaches :
+	
+	$ Requirement Reviews:
+		$ Use a checklist:
+			-Consistency
+			-Adaptability
+			-Completeness
+			-Traceability
+			-Comprehensibility
+			-Verifiability
+
+	$ PROTOTYPING :
+		$ Prototype facilitates user involvement during requirements elicitation
+		$ ensures engineers and users have the same interpretation of the requirements
+		$ Prototyping is most beneficial in systems that will have many user interactions
+		$ Systems with little or no user interaction does not benefit from prototyping
+	
+	$ MODEL VALIDATION :
+		$ Ensuring that the models represent all essential functional requirements
+		$ Demonstrating that each model is consistent in itself
+		$ Usage of the Fish Bone Analysis technique to validate if the requirements identified is
+		  addressing the reasons needing the solution to the problem
+
+	$ Acceptance Criteria:
+-----------------------------------------------------------------------------------------------------------------------
+Requirements Change Management
+
+$ Number of things can change in the environment during the development
+$ Changes in requirements have impacts on plans, work products etc.
+$ Uncontrolled changes can have a huge adverse impact on project
+$ Changes have to be allowed, but in a controlled manner
+$ Change Control->Traceability->Version Control->Status tracking
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+

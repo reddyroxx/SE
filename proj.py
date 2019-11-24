@@ -4,6 +4,7 @@ from flask import Flask,render_template ,redirect, url_for , request
 import sqlite3 as sql
 #import os.path
 import datetime
+from werkzeug import secure_filename
 
 conn=sql.connect("database.db")
 
@@ -36,12 +37,19 @@ def check_user():
     if request.method == 'POST':
         si=request.form['id']
         p = request.form['pwd']
-
+        ty = request.form['t']
     conn=sql.connect("database.db")
-    command = "select password from stakeholder where customer_id ='"+si+"';"    
+    command = "select password from stakeholder where customer_id ='"+si+"';" 
+    command1 = "select Type from stakeholder where customer_id ='"+si+"';"    
     a = list(conn.execute(command))[0][0]
+    b = list(conn.execute(command1))[0][0]
     if a==p:
-        return render_template("homepage.html")
+        if b==ty and b=='L':
+            return render_template("Laywer.html")
+        elif b==ty and b=='O':
+            return render_template("homepage.html")
+        elif b==ty and b=='T':    
+            return render_template("homepage.html")
     else:
         return render_template("registration.html")
 
@@ -54,6 +62,13 @@ def branch():
     b_id = list(conn.execute(command))[0][0]
     
     return render_template("branch_"+b_id+".html")
+
+@app.route('/success', methods = ['POST'])  
+def success():  
+    if request.method == 'POST':  
+        f = request.files['file']  
+        f.save(f.filename)  
+        return render_template("h2.html")   
 
 
 if __name__ == '__main__':
