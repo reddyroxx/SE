@@ -92,6 +92,20 @@ button{
 }
 
 </style>
+
+<script type="text/javascript">
+  
+  function verify(id){
+
+    b = document.getElementById(id).parentNode;
+
+    b.innerHTML = "Blocked"
+
+  }
+
+
+</script>
+
 </head>
 
 <body>
@@ -114,7 +128,7 @@ button{
       Type : 4 BHK <br>
       2550 sqft<br>
       Cost : 2 Cr<br>
-      <button id ="prop_1" type="button" onclick="verify(this.id)">Block the property</button><br>
+      <p><button id ="prop_1" type="button" onclick="verify(this.id)">Block the property</button><br></p>
    </div>
    <div class="column side">
      <h2> More Info. </h2>
@@ -141,7 +155,7 @@ button{
       Type : 3 BHK <br>
       2600 sqft<br>
       Cost : 1.0 Cr<br>
-      <button id ="prop_2" type="button" onclick="verify(this.id)">Block the property</button><br>
+      <p><button id ="prop_2" type="button" onclick="verify(this.id)">Block the property</button></p><br>
    </div>
    <div class="column side">
      <h2> More Info. </h2>
@@ -168,7 +182,7 @@ button{
       Type : 8 BHK <br>
       1200 sqft<br>
       Cost : 2.04 Cr<br>
-      <button id ="prop_3" type="button" onclick="verify(this.id)">Block the property</button><br>
+      <p><button id ="prop_3" type="button" onclick="verify(this.id)">Block the property</button></p><br>
    </div>
    <div class="column side">
      <h2> More Info. </h2>
@@ -194,7 +208,7 @@ button{
       Type : 1 BHK <br>
       750 sqft<br>
       Cost : 85.0 Lac<br>
-      <button id ="prop_4" type="button" onclick="verify(this.id)">Block the property</button><br>
+      <p><button id ="prop_4" type="button" onclick="verify(this.id)">Block the property</button></p><br>
    </div>
    <div class="column side">
      <h2> More Info. </h2>
@@ -220,7 +234,7 @@ button{
       Type : 3 BHK <br>
       1650 sqft<br>
       Cost : 6 Cr<br>
-      <button id ="prop_5" type="button" onclick="verify(this.id)">Block the property</button><br>
+      <p><button id ="prop_5" type="button" onclick="verify(this.id)">Block the property</button></p><br>
    </div>
    <div class="column side">
      <h2> More Info. </h2>
