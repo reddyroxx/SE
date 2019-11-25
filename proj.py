@@ -14,6 +14,12 @@ app = Flask(__name__)
 def home():
     return render_template("registration.html")
 
+@app.route("/video",methods=["POST","GET"])
+def video():
+    if request.method=='POST':
+        return render_template("video.html")
+
+
 @app.route("/add_user",methods=["POST","GET"])
 def add_user():
     if request.method=='POST':

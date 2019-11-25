@@ -117,9 +117,14 @@ button{
    </div>
    <div class="column side">
      <h2> More Info. </h2>
-     New property<br>
-     Unfurnished<br>
-     Ready to move in<br>
+     <a href="{{ url_for('static', filename='HCM.pdf') }}">View Seller Details</a><br>
+     <a href="{{ url_for('static', filename='HCM.pdf') }}">View Interiors</a><br>
+     <form name="form" action="{{ url_for('video') }}" method="POST">
+
+<input  type="submit" value="video">
+</p>
+</form>
+     
    </div>
  </div>
  
@@ -137,6 +142,7 @@ button{
    </div>
    <div class="column side">
      <h2> More Info. </h2>
+
      New Construction<br>
      Semi-Furnished<br>
      Ready to move in<br>

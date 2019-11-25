@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Files</title>
+
+<link href="{{ url_for('static', filename='menu.css') }}" type="text/css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename = 'pizza-logo.jpg') }}">
+<style>
+body{
+    background-image:url({{ url_for('static' , filename ='bg.jpg' )}});
+}
+</style>
+</head>
+<body>
+  
+  <video width="320" height="240" controls>
+    <source src={{ url_for('static', filename="sample.mkv") }} type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</body></html>
