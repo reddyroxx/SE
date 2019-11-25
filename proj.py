@@ -56,6 +56,8 @@ def check_user():
             return render_template("homepage.html")
         elif b==ty and b=='T':    
             return render_template("homepage.html")
+        else:
+            return render_template('homepage.html')
     else:
         return render_template("registration.html")
 

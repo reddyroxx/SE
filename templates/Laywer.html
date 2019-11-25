@@ -9,6 +9,39 @@ body{
     background-image:url({{ url_for('static' , filename ='bg.jpg' )}});
 }
 </style>
+<script type="text/javascript">
+  
+  function verify(id){
+    b = document.getElementById(id).parentNode;
+    b.innerHTML = "<p id='"+id+"'>Verified</p><p>Add Comments</p>";
+    com_id = "com_"+id
+    // alert(com_id);
+    textbox = '<textarea id="'+com_id+'" rows="3" required></textarea>'
+    button_id = "b_"+id
+    submit_button = '<button id ="'+button_id+'" type="button" onclick="postComment(id)">Submit</button>'
+
+    b.innerHTML += textbox;
+    b.innerHTML += submit_button;
+
+
+  }
+
+  function postComment(id){
+    
+    id = id.split("b_")[1];
+    // alert(id);
+    b = document.getElementById(id).parentNode;
+    textContent = document.getElementById('com_'+id).value;
+    b.innerHTML = "<p>Verified</p>"
+    b.innerHTML += "<p>Comments:</p>"
+    b.innerHTML += "<p>" +textContent + "</p>"
+
+
+
+  }
+
+
+</script>
 </head>
 <body >
 <table style="width:100%">
@@ -21,26 +54,31 @@ body{
     <td><b> Ref-No:23 4BHK flat </b></td>
 
     <td><a href="{{ url_for('static', filename='FM.pdf') }}">View</a></td>
+    <td><button id ="prop_1" type="button" onclick="verify(this.id)">Approve</button></td>
   </tr>
   <tr>
     <td><b>  Ref-No:2 1BHK flat</b></td>
 
     <td><a href="{{ url_for('static', filename='HCM.pdf') }}">View</a></td>
+    <td><button id ="prop_2" type="button" onclick="verify(this.id)">Approve</button></td>
   </tr>
   <tr>
     <td><b> Ref-No:5 penthouse</b></td>
 
     <td><a href="{{ url_for('static', filename='PPF.pdf') }}">View</a></td>
+    <td><button id ="prop_3" type="button" onclick="verify(this.id)">Approve</button></td>
   </tr>
   <tr>
     <td><b> Ref-No:3 3 BHK residential plot </b>
 
     <td><a href="{{ url_for('static', filename='PIM.pdf') }}">View</a></td>
+    <td><button id ="prop_4" type="button" onclick="verify(this.id)">Approve</button></td>
   </tr>
   <tr>
     <td><b> Ref-No:17 2BHK flat </b>
 
     <td><a href="{{ url_for('static', filename='RM.txt') }}">View</a>  </td>
+    <td><button id ="prop_5" type="button" onclick="verify(this.id)">Approve</button></td>
   </tr>
   
 </tr>
