@@ -67,6 +67,16 @@ p {
 <body>
 
 <h1 align="center" > REAL ESTATE MANAGEMENT SYSTEM</h1>
+<h3><form align ='right' name="profile" action="{{ url_for('user_profile') }}" method="POST">
+     <input  type="submit" value="Profile">
+     
+     </form>
+</h3>
+<form align ='right' name="profile" action="{{ url_for('logout') }}" method="POST">
+     <input  type="submit" value="Logout">
+     
+     </form>
+
 
 <h2 align="center" >Locations</h2>
 

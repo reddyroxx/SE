@@ -25,6 +25,11 @@ def user_profile():
     if request.method=='POST':
         return render_template("user.html")
 
+@app.route("/logout",methods=["POST","GET"])
+def logout():
+    if request.method=='POST':
+        return render_template("registration.html")
+
 @app.route("/add_user",methods=["POST","GET"])
 def add_user():
     if request.method=='POST':
